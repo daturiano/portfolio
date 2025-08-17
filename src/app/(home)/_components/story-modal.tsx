@@ -5,7 +5,7 @@ import profile from "@/app/public/profile.png";
 import story from "@/app/public/image-1.jpeg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { XIcon } from "@phosphor-icons/react";
 
 type StoryModalProps = {
   isViewing: boolean;
@@ -69,7 +69,7 @@ export default function StoryModal({
             onClick={() => setIsViewing(false)}
             className="cursor-pointer"
           >
-            <X />
+            <XIcon />
           </button>
         </div>
       </div>

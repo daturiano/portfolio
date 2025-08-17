@@ -1,5 +1,6 @@
-import { Mail } from "lucide-react";
-import React from "react";
+"use client";
+
+import { PaperclipIcon } from "@phosphor-icons/react";
 
 export default function AvailableForWork() {
   return (
@@ -16,7 +17,7 @@ export default function AvailableForWork() {
             <span className="text-muted font-medium whitespace-nowrap">
               Contact me
             </span>
-            <Mail size={18} className="text-muted" />
+            <PaperclipIcon className="text-muted" />
           </div>
         </div>
       </div>
