@@ -14,8 +14,8 @@ import twLight from "@/app/public/tech-stack/tw-light.png";
 import tw from "@/app/public/tech-stack/tw.png";
 import sbLight from "@/app/public/tech-stack/sb-light.png";
 import sb from "@/app/public/tech-stack/sb.png";
-import ghLight from "@/app/public/tech-stack/gh-light.png";
-import gh from "@/app/public/tech-stack/gh-light.png";
+import gitLight from "@/app/public/tech-stack/git-light.png";
+import git from "@/app/public/tech-stack/git.png";
 import Image from "next/image";
 
 const stacks = [
@@ -26,7 +26,7 @@ const stacks = [
   { title: "Next.js", imageLight: nextLight, image: next },
   { title: "Tailwind", imageLight: twLight, image: tw },
   { title: "Supabase", imageLight: sbLight, image: sb },
-  { title: "Github", imageLight: ghLight, image: gh },
+  { title: "Git", imageLight: gitLight, image: git },
 ];
 
 export default function TechStack() {
@@ -49,14 +49,14 @@ export default function TechStack() {
           >
             <div className="relative">
               <Image
-                src={item.imageLight}
+                src={item.image}
                 alt={item.title}
                 height={24}
                 width={24}
                 className="transition-opacity duration-300 group-hover:opacity-0"
               />
               <Image
-                src={item.image}
+                src={item.imageLight}
                 alt={item.title}
                 height={24}
                 width={24}
