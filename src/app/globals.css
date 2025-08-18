@@ -1,16 +1,18 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   --background: #0a0a0a;
   --foreground: #ffffff;
   --muted: #aaaaaa;
-  --card: #1a1a1a;
+  --accent: #3b83ff;
+  --card: #0a0a0a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-accent: var(--accent);
   --color-card: var(--card);
   --font-raleway: var(--font-raleway);
 }

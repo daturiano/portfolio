@@ -28,7 +28,7 @@ export default function Navigation() {
           <button
             key={item.title}
             onClick={() => setCurrentTab(item.title)}
-            className={`${currentTab == item.title ? "text-foreground font-semibold" : "text-muted/60 hover:text-foreground"} $ flex w-full cursor-pointer items-center justify-between rounded-md px-4 py-2`}
+            className={`${currentTab == item.title ? "text-accent font-semibold" : "text-muted/60 hover:text-foreground"} $ flex w-full cursor-pointer items-center justify-between rounded-md px-4 py-2`}
           >
             <p>{item.title}</p>
             {currentTab == item.title ? (
