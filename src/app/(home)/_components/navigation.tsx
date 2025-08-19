@@ -3,6 +3,7 @@
 import {
   AtIcon,
   CodeIcon,
+  FileArrowDownIcon,
   HouseIcon,
   StudentIcon,
   UserCircleIcon,
@@ -22,8 +23,8 @@ export default function Navigation() {
   const [currentTab, setCurrentTab] = useState("Home");
 
   return (
-    <>
-      <Card className="flex h-full flex-1 flex-col items-end justify-between px-4">
+    <div className="flex h-full flex-col gap-4">
+      <Card className="flex flex-1 flex-col items-end justify-between px-4">
         {navigation.map((item) => (
           <button
             key={item.title}
@@ -39,14 +40,17 @@ export default function Navigation() {
           </button>
         ))}
         <div className="bg-muted/60 h-[1px] w-full px-4"></div>
-        <button className="flex w-full items-center justify-center rounded-md border px-2 py-2">
-          <p className="text-sm font-semibold">Download CV</p>
-        </button>
+        <div className="flex w-full items-start justify-center px-4">
+          <button className="border-muted/60 hover:bg-muted/10 flex cursor-pointer items-center gap-4 rounded-md border px-4 py-2">
+            <p className="text-sm font-semibold">Resume</p>
+            <FileArrowDownIcon />
+          </button>
+        </div>
       </Card>
       <Card className="flex-row items-center justify-center gap-2 border-zinc-800 px-10 py-2">
         <p className="text-xl">🇵🇭</p>
         <p className="text-sm whitespace-nowrap">Based in Philippines</p>
       </Card>
-    </>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ export default function AvailableForWork() {
       <div className="group cursor-pointer">
         <div className="flex flex-row items-center gap-2 transition-all duration-300 ease-in-out">
           <div className="h-3 w-3 rounded-full bg-green-500"></div>
-          <div className="border-muted flex items-center gap-2 border-b transition-transform duration-1000 ease-in-out group-hover:-translate-y-full group-hover:opacity-50">
+          <div className="border-muted flex items-center gap-2 transition-transform duration-1000 ease-in-out group-hover:-translate-y-full group-hover:opacity-50">
             <span className="text-muted font-medium whitespace-nowrap">
               Available for work
             </span>
