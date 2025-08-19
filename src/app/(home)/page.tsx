@@ -5,19 +5,25 @@ import TechStack from "./_components/tech-stack";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-4 grid-rows-6 gap-4">
-      <div className="col-span-3 row-span-2">
-        <AboutMe />
+    <div className="flex flex-col items-center space-y-4">
+      <div className="grid grid-cols-4 grid-rows-6 gap-4">
+        <div className="col-span-3 row-span-2">
+          <AboutMe />
+        </div>
+        <div className="col-span-3 col-start-1 row-span-3 row-start-3">
+          <TechStack />
+        </div>
+        <div className="col-span-4 col-start-1 row-start-6">
+          <HomeFooter />
+        </div>
+        <div className="col-start-4 row-span-5 row-start-1">
+          <Navigation />
+        </div>
       </div>
-      <div className="col-span-3 col-start-1 row-span-3 row-start-3">
-        <TechStack />
-      </div>
-      <div className="col-span-3 col-start-1 row-start-6">
-        <HomeFooter />
-      </div>
-      <div className="col-start-4 row-span-6 row-start-1">
-        <Navigation />
-      </div>
+      <p className="text-xs">
+        Made by{" "}
+        <span className="text-accent italic">Daniel Joshua Turiano</span>
+      </p>
     </div>
   );
 }

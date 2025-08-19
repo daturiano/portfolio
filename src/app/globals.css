@@ -24,7 +24,7 @@ body {
 }
 
 @theme {
-  --animate-meteor: meteor 10s linear infinite;
+  --animate-meteor: meteor 5s linear infinite;
 }
 
 @keyframes meteor {

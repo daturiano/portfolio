@@ -31,10 +31,10 @@ const stacks = [
 
 export default function TechStack() {
   return (
-    <Card className="gap-6">
+    <Card className="h-full gap-6">
       <div className="text-muted text-pretty">
         <p>
-          <span className="text-lg font-semibold text-white">
+          <span className="font-semibold text-white">
             Current Technologies ·{" "}
           </span>
           I&apos;m proficient in a range of modern technologies that empower me
@@ -51,19 +51,19 @@ export default function TechStack() {
               <Image
                 src={item.image}
                 alt={item.title}
-                height={24}
-                width={24}
+                height={30}
+                width={30}
                 className="transition-opacity duration-300 group-hover:opacity-0"
               />
               <Image
                 src={item.imageLight}
                 alt={item.title}
-                height={24}
-                width={24}
+                height={30}
+                width={30}
                 className="absolute inset-0 opacity-0 duration-300 group-hover:-translate-y-1 group-hover:opacity-100"
               />
             </div>
-            <p className="text-muted group-hover:text-foreground text-xs font-semibold">
+            <p className="text-muted group-hover:text-foreground text-sm font-semibold">
               {item.title}
             </p>
           </div>
