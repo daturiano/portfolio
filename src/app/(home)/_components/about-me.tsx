@@ -5,7 +5,7 @@ import Card from "./card";
 
 export default function AboutMe() {
   return (
-    <Card className="flex h-full flex-row items-center gap-6 py-10">
+    <Card className="flex flex-row items-center gap-6 py-10">
       <Avatar />
       <div className="flex flex-col gap-3">
         <div>
