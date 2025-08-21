@@ -4,7 +4,7 @@ import TechStack from "./tech-stack";
 
 export default function HomeGrid() {
   return (
-    <div className="grid grid-cols-2 grid-rows-6 gap-4">
+    <div className="grid h-full w-full grid-cols-2 grid-rows-6 gap-4">
       <div className="col-span-2 row-span-2">
         <AboutMe />
       </div>

@@ -30,7 +30,7 @@ export default function Navigation() {
   const { tab, setTab } = useNavigation();
 
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="flex h-[620px] w-[204px] flex-col gap-4">
       <Card className="flex flex-1 flex-col items-end justify-between px-4 py-8">
         {navigation.map((item) => (
           <button

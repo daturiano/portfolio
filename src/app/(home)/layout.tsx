@@ -14,11 +14,9 @@ export default function IndexLayout({
       <div className="font-raleway mx-auto flex min-h-screen max-w-[54rem] flex-col items-center justify-center space-y-4">
         <Meteors number={5} />
         <Background />
-        <div className="z-50 flex flex-row">
-          <div className="flex flex-row gap-4">
-            {children}
-            <Navigation />
-          </div>
+        <div className="z-50 flex w-full max-w-[54rem] flex-row gap-4">
+          <div className="flex-1">{children}</div>
+          <Navigation />
         </div>
         <p className="text-xs">
           Made by{" "}
