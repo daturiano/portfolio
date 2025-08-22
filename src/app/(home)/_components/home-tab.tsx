@@ -1,12 +1,12 @@
-import AboutMe from "./about-me";
 import HomeFooter from "./home-footer";
+import HomeHeader from "./home-header";
 import TechStack from "./tech-stack";
 
-export default function HomeGrid() {
+export default function HomeTab() {
   return (
     <div className="grid h-full w-full grid-cols-2 grid-rows-6 gap-4">
       <div className="col-span-2 row-span-2">
-        <AboutMe />
+        <HomeHeader />
       </div>
       <div className="col-span-2 row-span-3">
         <TechStack />

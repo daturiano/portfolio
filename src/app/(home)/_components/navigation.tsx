@@ -21,8 +21,8 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   { icon: HouseIcon, title: "Home" },
   { icon: UserCircleIcon, title: "About" },
-  { icon: StudentIcon, title: "Education" },
   { icon: CodeIcon, title: "Projects" },
+  { icon: StudentIcon, title: "Education" },
   { icon: AtIcon, title: "Contact" },
 ];
 
@@ -52,7 +52,7 @@ export default function Navigation() {
           spotlightColor="#3b82f6"
           className="bg-muted/10 flex flex-row items-center justify-center gap-2 rounded-md border border-[#292929] py-2"
         >
-          <p className="text-sm font-semibold">Resume</p>
+          <p className="text-sm font-semibold">Download CV</p>
           <FileArrowDownIcon />
         </SpotlightButton>
         <div className="flex flex-row items-center justify-center gap-2 rounded-md border border-zinc-800 px-4 py-1">

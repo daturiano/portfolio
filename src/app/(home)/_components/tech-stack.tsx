@@ -31,7 +31,7 @@ const stacks = [
 
 export default function TechStack() {
   return (
-    <Card className="gap-6">
+    <Card className="h-full gap-6">
       <div className="text-muted text-pretty">
         <p>
           <span className="font-semibold text-white">

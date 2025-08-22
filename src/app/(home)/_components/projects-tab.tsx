@@ -17,11 +17,11 @@ const stackUsed = [
   "Supabase",
 ];
 
-export default function Projects() {
+export default function ProjectsTab() {
   return (
     <Card className="h-full w-full gap-4">
       <div className="flex flex-row items-center gap-4">
-        <CodeSimpleIcon size={32} />
+        <CodeSimpleIcon size={28} className="text-muted" />
         <h1 className="text-2xl font-bold">Featured Projects</h1>
       </div>
       <Image
