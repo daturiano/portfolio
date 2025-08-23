@@ -14,7 +14,7 @@ export default function AboutTab() {
       <Card className="gap-4 px-12 py-12">
         <div className="flex flex-row items-center gap-4">
           <PersonIcon size={28} className="text-muted" weight="fill" />
-          <h1 className="text-accent text-2xl font-semibold">About Me</h1>
+          <h1 className="text-2xl font-semibold">About Me</h1>
         </div>
         <p className="text-muted text-justify">
           I’m a junior frontend developer passionate about building clean,
@@ -28,9 +28,7 @@ export default function AboutTab() {
           <Card className="w-[372px] gap-4 px-8">
             <div className="flex flex-row items-center gap-4">
               <TargetIcon size={28} className="text-muted" weight="fill" />
-              <h1 className="text-accent text-2xl font-semibold">
-                Career Goals
-              </h1>
+              <h1 className="text-2xl font-semibold">Career Goals</h1>
             </div>
             <p className="text-muted text-justify">
               I’m eager to gain real-world experience through internships,
@@ -40,7 +38,7 @@ export default function AboutTab() {
             </p>
           </Card>
           <Card className="flex-1 gap-4">
-            <h1 className="text-accent text-2xl font-semibold">Hobbies</h1>
+            <h1 className="text-2xl font-semibold">Hobbies</h1>
             <div className="flex flex-1 flex-col justify-between pb-4">
               {hobbies.map((item) => (
                 <div

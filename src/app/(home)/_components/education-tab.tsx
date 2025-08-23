@@ -14,9 +14,13 @@ export default function EducationTab() {
           <GraduationCapIcon size={28} className="text-muted" weight="fill" />
           <h1 className="text-2xl font-semibold">Education</h1>
         </div>
+        <p className="text-muted text-justify">
+          My educational background has provided me with a solid foundation of
+          software engineering principles.
+        </p>
         <div className="relative flex flex-1 flex-col">
           <div className="bg-muted absolute inset-0 left-13 z-10 h-full w-[1px]"></div>
-          <div className="relative flex flex-row gap-4 p-6">
+          <div className="relative flex flex-row gap-4 px-6 py-4">
             <Image src={uncLogo} alt="unc logo" className="z-25 mt-1 size-14" />
             <div className="flex flex-col gap-2">
               <div className="flex flex-col leading-5">
