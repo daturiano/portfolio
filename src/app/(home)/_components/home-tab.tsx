@@ -4,14 +4,14 @@ import TechStack from "./tech-stack";
 
 export default function HomeTab() {
   return (
-    <div className="grid h-full w-full grid-cols-2 grid-rows-6 gap-4">
+    <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:grid-rows-6">
       <div className="col-span-2 row-span-2">
         <HomeHeader />
       </div>
-      <div className="col-span-2 row-span-3">
+      <div className="md:col-span-2 md:row-span-3">
         <TechStack />
       </div>
-      <div className="col-span-2">
+      <div className="md:col-span-2">
         <HomeFooter />
       </div>
     </div>

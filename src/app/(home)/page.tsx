@@ -1,6 +1,7 @@
 "use client";
 
 import AboutTab from "./_components/about-tab";
+import ContactTab from "./_components/contact-tab";
 import EducationTab from "./_components/education-tab";
 import HomeTab from "./_components/home-tab";
 import { useNavigation } from "./_components/navigation-provider";
@@ -11,9 +12,10 @@ export default function Index() {
   return (
     <div className="h-full">
       {tab == "Home" && <HomeTab />}
-      {tab == "About" && <AboutTab />}
-      {tab === "Projects" && <ProjectsTab />}
       {tab === "Education" && <EducationTab />}
+      {tab === "Projects" && <ProjectsTab />}
+      {tab == "About" && <AboutTab />}
+      {tab === "Contact" && <ContactTab />}
     </div>
   );
 }

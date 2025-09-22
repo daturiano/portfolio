@@ -20,13 +20,17 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { icon: HouseIcon, title: "Home" },
-  { icon: UserCircleIcon, title: "About" },
-  { icon: CodeIcon, title: "Projects" },
   { icon: StudentIcon, title: "Education" },
+  { icon: CodeIcon, title: "Projects" },
+  { icon: UserCircleIcon, title: "About" },
   { icon: AtIcon, title: "Contact" },
 ];
 
-export default function Navigation() {
+type NavigationProps = {
+  setIsOpen?: (args: boolean) => void;
+};
+
+export default function Navigation({ setIsOpen }: NavigationProps) {
   const { tab, setTab } = useNavigation();
 
   return (
@@ -35,7 +39,12 @@ export default function Navigation() {
         {navigation.map((item) => (
           <button
             key={item.title}
-            onClick={() => setTab(item.title)}
+            onClick={() => {
+              setTab(item.title);
+              if (setIsOpen) {
+                setIsOpen(false);
+              }
+            }}
             className={`${tab == item.title ? "text-accent font-semibold" : "text-muted/60 hover:text-foreground"} $ flex w-full cursor-pointer items-center justify-between rounded-md px-4 py-2`}
           >
             <p>{item.title}</p>

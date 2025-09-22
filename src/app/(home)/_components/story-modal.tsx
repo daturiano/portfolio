@@ -38,7 +38,7 @@ export default function StoryModal({
 
   return (
     <div
-      className="bg-background/90 fixed inset-0 z-50 flex min-h-screen min-w-screen items-center justify-center"
+      className="bg-background/90 fixed inset-0 z-50 flex min-h-screen min-w-screen items-center justify-center px-2"
       onClick={handleBackdropClick}
     >
       <div className="relative flex h-[600px] w-[480px] flex-col items-center px-4">

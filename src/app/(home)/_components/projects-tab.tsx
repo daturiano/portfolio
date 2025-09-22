@@ -1,20 +1,15 @@
-import React from "react";
-import Card from "./card";
-import Image from "next/image";
 import project from "@/app/public/ligtascab-1.png";
-import {
-  CodeSimpleIcon,
-  GithubLogoIcon,
-  GoogleChromeLogoIcon,
-} from "@phosphor-icons/react";
+import { CodeSimpleIcon, GithubLogoIcon } from "@phosphor-icons/react";
+import Image from "next/image";
 import Link from "next/link";
+import Card from "./card";
 
 const stackUsed = [
-  "TypeScript",
-  "NextJS",
-  "TailwindCSS",
-  "shadcn/ui",
-  "Supabase",
+  { tech: "TypeScript", link: "https://www.typescriptlang.org/" },
+  { tech: "NextJS", link: "https://nextjs.org/" },
+  { tech: "TailwindCSS", link: "https://tailwindcss.com/" },
+  { tech: "shadcn", link: "https://ui.shadcn.com/" },
+  { tech: "Supabase", link: "https://supabase.com/" },
 ];
 
 export default function ProjectsTab() {
@@ -38,24 +33,21 @@ export default function ProjectsTab() {
             operators, and authorities.
           </p>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row flex-wrap gap-4">
           {stackUsed.map((item) => (
-            <div key={item} className="bg-muted/20 rounded-sm px-4 py-1">
-              <p className="text-sm">{item}</p>
-            </div>
+            <Link
+              href={item.link}
+              key={item.tech}
+              className="bg-muted/20 hover:bg-muted/30 cursor-pointer rounded-sm px-4 py-1"
+            >
+              <p className="text-sm">{item.tech}</p>
+            </Link>
           ))}
         </div>
         <div className="flex flex-row items-center gap-2">
           <Link
             href={"https://github.com/daturiano/ligtascab"}
-            className="text-background flex w-min items-center justify-center gap-2 rounded-md bg-white px-3 py-1 text-sm font-semibold"
-          >
-            <GoogleChromeLogoIcon />
-            <p>Website</p>
-          </Link>
-          <Link
-            href={"https://github.com/daturiano/ligtascab"}
-            className="text-background flex w-min items-center justify-center gap-2 rounded-md bg-white px-3 py-1 text-sm font-semibold"
+            className="text-background flex w-min items-center justify-center gap-2 rounded-md bg-white px-3 py-1 text-sm font-semibold hover:bg-white/90"
           >
             <GithubLogoIcon />
             <p>Source</p>

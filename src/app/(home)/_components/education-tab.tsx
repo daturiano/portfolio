@@ -5,6 +5,7 @@ import { GraduationCapIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import uncLogo from "@/app/public/unc.png";
 import udemyLogo from "@/app/public/udemy.png";
+import Link from "next/link";
 
 export default function EducationTab() {
   return (
@@ -14,18 +15,23 @@ export default function EducationTab() {
           <GraduationCapIcon size={28} className="text-muted" weight="fill" />
           <h1 className="text-2xl font-semibold">Education</h1>
         </div>
-        <p className="text-muted text-justify">
+        <p className="text-muted md:text-justify">
           My educational background has provided me with a solid foundation of
           software engineering principles.
         </p>
         <div className="relative flex flex-1 flex-col">
-          <div className="bg-muted absolute inset-0 left-13 z-10 h-full w-[1px]"></div>
-          <div className="relative flex flex-row gap-4 px-6 py-4">
+          <div className="bg-muted absolute inset-0 left-7 z-10 h-full w-[1px] md:left-13"></div>
+          <div className="relative flex flex-row gap-4 py-4 md:px-6">
             <Image src={uncLogo} alt="unc logo" className="z-25 mt-1 size-14" />
             <div className="flex flex-col gap-2">
               <div className="flex flex-col leading-5">
                 <p className="text-muted text-sm">August 2022 - Present</p>
-                <p className="font-semibold">University of Nueva Caceres</p>
+                <Link
+                  href={"https://unc.edu.ph/"}
+                  className="font-semibold hover:text-blue-500"
+                >
+                  University of Nueva Caceres
+                </Link>
                 <p className="text-muted">
                   Bachelor of Science in Information Technology
                 </p>
@@ -39,31 +45,24 @@ export default function EducationTab() {
               </div>
             </div>
           </div>
-          <div className="relative flex flex-row gap-4 px-6">
+          <div className="relative flex flex-row gap-4 md:px-6">
             <Image
               src={udemyLogo}
               alt="udemy logo"
               className="z-25 mt-1 size-14"
             />
             <div className="flex flex-col gap-5">
-              <div className="flex flex-col leading-5">
-                <p className="font-semibold">
-                  Build Responsive Real-World Websites with HTML and CSS
-                </p>
-                <p className="text-muted text-sm">By Jonas Schmedtmann</p>
-              </div>
-              <div className="flex flex-col leading-5">
-                <p className="font-semibold">
-                  The Complete JavaScript Course 2025: From Zero to Expert!
-                </p>
-                <p className="text-muted text-sm">By Jonas Schmedtmann</p>
-              </div>
-              <div className="flex flex-col leading-5">
-                <p className="font-semibold">
-                  The Ultimate React Course 2025: React, Next.js, & More
-                </p>
-                <p className="text-muted text-sm">By Jonas Schmedtmann</p>
-              </div>
+              {udemy.map((item) => (
+                <div className="flex flex-col leading-5" key={item.title}>
+                  <Link
+                    href={item.link}
+                    className="font-semibold hover:text-blue-500"
+                  >
+                    {item.title}
+                  </Link>
+                  <p className="text-muted text-sm">By {item.by}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -72,3 +71,21 @@ export default function EducationTab() {
     </div>
   );
 }
+
+const udemy = [
+  {
+    title: "Build Responsive Real-World Websites with HTML and CSS",
+    by: "Jonas Schmedtmann",
+    link: "https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/",
+  },
+  {
+    title: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    by: "Jonas Schmedtmann",
+    link: "https://www.udemy.com/course/the-complete-javascript-course/",
+  },
+  {
+    title: "The Ultimate React Course 2025: React, Next.js, & More",
+    by: "Jonas Schmedtmann",
+    link: "https://www.udemy.com/course/the-ultimate-react-course/",
+  },
+];
