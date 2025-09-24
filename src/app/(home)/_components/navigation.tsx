@@ -57,13 +57,15 @@ export default function Navigation({ setIsOpen }: NavigationProps) {
         ))}
       </Card>
       <div className="flex max-w-[204px] min-w-[204px] flex-col justify-between gap-4">
-        <SpotlightButton
-          spotlightColor="#3b82f6"
-          className="bg-muted/10 flex flex-row items-center justify-center gap-2 rounded-md border border-[#292929] py-2"
-        >
-          <p className="text-sm font-semibold">Download CV</p>
-          <FileArrowDownIcon />
-        </SpotlightButton>
+        <a href={"cv.pdf"} download>
+          <SpotlightButton
+            spotlightColor="#3b82f6"
+            className="bg-muted/10 flex flex-row items-center justify-center gap-2 rounded-md border border-[#292929] py-2"
+          >
+            <p className="text-sm font-semibold">Download CV</p>
+            <FileArrowDownIcon />
+          </SpotlightButton>
+        </a>
         <div className="flex flex-row items-center justify-center gap-2 rounded-md border border-zinc-800 px-4 py-1">
           <p className="text-lg">🇵🇭</p>
           <p className="text-xs whitespace-nowrap">Based in Philippines</p>

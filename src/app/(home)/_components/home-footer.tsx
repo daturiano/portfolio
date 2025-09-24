@@ -15,13 +15,21 @@ export default function HomeFooter() {
           </div>
           <p className="text-foreground/80 text-lg font-semibold">
             Like what you see? Reach out{" "}
-            <span className="text-accent underline">via email</span> to
-            collaborate!
+            <a
+              className="text-accent underline"
+              href="mailto:dturiano.r@gmail.com"
+            >
+              via email
+            </a>{" "}
+            to collaborate!
           </p>
         </div>
       </div>
       <div className="z-40 order-1 flex w-full flex-row gap-4 md:w-max">
-        <div className="group bg-background flex w-full items-center justify-center rounded-md border border-[#292929] px-10 py-8 transition-all duration-300 md:py-2">
+        <a
+          className="group bg-background flex w-full items-center justify-center rounded-md border border-[#292929] px-10 py-8 transition-all duration-300 md:py-2"
+          href="https://www.linkedin.com/in/daturiano/"
+        >
           <Image
             src={linkedin}
             alt="linkedin icon"
@@ -29,8 +37,11 @@ export default function HomeFooter() {
             height={38}
             width={38}
           />
-        </div>
-        <div className="group bg-background flex w-full items-center justify-center rounded-md border border-[#292929] px-10 py-8 transition-all duration-300 md:py-2">
+        </a>
+        <a
+          className="group bg-background flex w-full items-center justify-center rounded-md border border-[#292929] px-10 py-8 transition-all duration-300 md:py-2"
+          href="https://github.com/daturiano"
+        >
           <Image
             src={github}
             alt="github icon"
@@ -38,7 +49,7 @@ export default function HomeFooter() {
             height={38}
             width={38}
           />
-        </div>
+        </a>
       </div>
     </div>
   );
